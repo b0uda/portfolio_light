@@ -1,0 +1,17 @@
+/*
+	=================================================================================================
+		Grids.
+	=================================================================================================
+*/
+
+@mixin container($width:550) {
+	position: relative;
+	@include outer-container( rem($width) );
+
+	padding: 0 rem(16);
+}
+
+$bp-desktop: new-breakpoint(min-width 1024px);
+$bp-medium: new-breakpoint(max-width 1023px);
+$bp-mobile: new-breakpoint(max-width 559px);
+$bp-max-h: new-breakpoint(max-height 719px);
