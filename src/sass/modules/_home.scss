@@ -1,0 +1,88 @@
+/*
+	=================================================================================================
+		Home Page.
+	=================================================================================================
+*/
+
+#home {
+	background-image: url(//i.imgsafe.org/8717961.jpg);
+	background-size: cover;
+
+	text-align: center;
+
+	z-index: 99;
+
+  .profil {
+    @include container;
+
+    margin-bottom: $base-margin;
+
+    .profil-img {
+      color: transparent;
+      background-image: url(//i.imgsafe.org/e5e9d41.jpg);
+      background-size: contain; 
+
+      @include size(rem(168));
+      margin: 0 auto $base-margin auto;
+
+      box-shadow: 0 rem(1) rem(2) $dark;
+
+      @include my-transition;
+
+      @include media($bp-medium) {
+        @include size(rem(168));
+      } // end-bp-desktop
+
+      @include media($bp-mobile) {
+        @include size(rem(132));
+      } // end-bp-mobile
+
+    } // end-profil-img
+
+    h1 {
+      font-size: rem(56);
+      margin-bottom: 0;
+
+      background-color: $color-1;
+      color: $light;
+      text-shadow: rem(4) rem(4) $dark;
+
+      display: inline-block;
+      padding: rem(5) rem(20);
+
+      @include my-transition;
+
+      @include media($bp-medium) {
+        font-size: rem(48);
+      } // end-bp-desktop
+
+      @include media($bp-mobile) {
+        font-size: rem(36);
+        text-shadow: rem(3) rem(3) $dark;
+      } // end-bp-mobile
+
+    } // end-h1
+
+    p {
+
+      u {
+        display: inline-block;
+        color: $light;
+        background-color: $color-2;
+        padding: rem(5) rem(20);
+
+        text-decoration: none;
+
+        @include media($bp-mobile) {
+          // font-size: .8rem;
+        } // end-bp-mobile
+
+      } // end-u
+
+    } // end-p
+
+  } // end-profil
+
+} // end-home
+
+/*
