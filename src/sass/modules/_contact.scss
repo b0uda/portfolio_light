@@ -1,0 +1,46 @@
+
+/*
+	=================================================================================================
+		Contact Page.
+	=================================================================================================
+*/
+
+#contact {
+    background-image: url(//i.imgsafe.org/t/86c1376.jpg);
+    background-size: cover;
+  
+      text-align: center;
+  
+      z-index: 96;
+  
+    .title {
+      @include container;
+  
+      margin-bottom: $base-margin;
+  
+      @include media($bp-max-h) {
+        margin-top: 0;
+      } // end-bp-max-h
+  
+      h2 {
+        @include my-h;
+      }
+  
+    } // end-title
+  
+    .form-container {
+      @include container;
+  
+      .form-group {
+        margin-bottom: $base-margin;
+  
+        &:last-of-type {
+          margin-bottom: 0;
+        } // end-of-last-of-type
+  
+      } // end-form-group
+  
+    } // end-form
+  
+  } // end-contact
+  
