@@ -234,9 +234,9 @@ $(function() {
     $navToggle.on('click', function(e) {
       var self = $(this);
       if (self.hasClass('fa-bars')) {
-        self.addClass('fa-close').removeClass('fa-bars');
+        self.addClass('fa-times').removeClass('fa-bars');
       } else {
-        self.addClass('fa-bars').removeClass('fa-close');
+        self.addClass('fa-bars').removeClass('fa-times');
       }
       $navList.toggle();
     });
