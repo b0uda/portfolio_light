@@ -1,0 +1,50 @@
+/*
+	=================================================================================================
+		Forms.
+	=================================================================================================
+*/
+
+form {
+
+	input {
+		background-color: $light;
+
+		color: $dark;
+
+		@include size(100% ($base-margin * 2));
+
+		padding-left: rem(16);
+
+		outline: none;
+		border: none;
+    
+		@include my-transition;
+
+		&:focus {
+			@include form-border($color-2);
+		}
+	} // end-input
+
+	textarea {
+		background-color: $light;
+
+		color: $dark;
+
+		height: $base-margin * 4;
+		width: 100%;
+		max-width: 100%;
+
+		padding-left: rem(16);
+		padding-top: rem(16);
+
+		outline: none;
+		border: none;
+
+		@include my-transition;
+
+		&:focus {
+			@include form-border($color-2);
+		}
+	} // end-textarea
+
+} // end-form

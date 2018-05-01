@@ -1,0 +1,173 @@
+/*
+	=================================================================================================
+		Modules.
+	=================================================================================================
+*/
+
+.btn {  
+    background-color: $dark;
+      color: $light;
+  
+      border: none;
+    outline: none;
+    padding: rem($base-margin / 2) rem(25);
+  
+      @include my-transition;
+    
+    float: left;
+    
+    @include media($bp-mobile) {
+      width: 100%;
+    }
+  
+      &.clear {
+          background-color: $dark;
+      margin-right: 1rem;
+      
+      @include media($bp-mobile) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      } // end-clear
+    
+    &.action {
+      background-color: $color-2;
+      color: $light;
+    } // end-action
+    
+    &:hover {
+          background-color: $dark;
+      color: $light;
+      }
+    
+    &:active {
+      background-color: $dark;
+      color: $light;
+    }
+  
+  } // end-btn
+  
+  .scroll-icon {
+    position: absolute;
+  
+    width: 100%;
+  
+    text-align: center;
+  
+    bottom: $base-margin;
+    
+    @include media($bp-medium) {
+      display: none;
+    } // end-bp-medium
+  
+    @include media($bp-mobile) {
+      display: none;
+    } // end-bp-mobile
+  
+    @include media($bp-max-h) {
+      display: none;
+    } // end-bp-max-h
+    
+    figure {
+      margin: 0;
+      
+      svg {
+        fill: $light;
+  
+        .wheel {
+          @keyframes flash {
+            from {fill: $light;}
+            to {fill: $color-2;}
+          }
+          fill: $color-2;
+          
+          @include animation(flash 1s ease infinite alternate);
+        }
+      } // end-svg
+      
+    } // end-figure
+  
+    i {
+      @include size(rem($base-margin * 2));
+      line-height: rem($base-margin * 2);
+  
+      font-size: rem(32);
+  
+      color: $light;
+      
+      @keyframes scroll {
+          from {margin-bottom: rem(25);}
+          to {margin-bottom: 0;}
+      }
+      
+      @include animation(scroll 1s ease-out infinite alternate);
+      
+      &.animate {
+        @include animation(scroll 1s ease-out infinite);
+      }
+      
+    } // end-i
+  } // end-scroll-icon
+  
+  .social-links {
+    margin-bottom: $base-margin;
+  
+    @include container;
+  
+    @include media($bp-mobile) {
+      margin-bottom: $base-margin;
+    }
+  
+    a {
+      display: inline-block;
+  
+      background-color: $light;
+      color: $dark;
+  
+      @include size($base-margin * 2);
+      line-height: $base-margin * 2;
+  
+      margin-right: rem(16);
+  
+      @include media($bp-mobile) {
+        @include size($base-margin * 1.6);
+        line-height: $base-margin * 1.6;
+  
+        margin-right: rem(8);
+      } // end-bp-mobile
+  
+      @include my-transition;
+  
+      &:last-of-type {
+        margin-right: 0;
+      } // end-of-last-of-type
+  
+      i {
+        font-size: rem(20);
+  
+        text-align: center;
+      } // end-i
+  
+      &:hover {
+        background-color: $color-1;
+        color: $light;
+        border: none;
+  
+        @include media($bp-mobile) {
+          background-color: $light;
+          color: $dark;
+        } // end-bp-mobile
+  
+      } // end-hover
+      
+      &:active {
+        @include media($bp-mobile) {
+          background-color: $color-1;
+          color: $light;
+        } // end-bp-mobile
+      }
+  
+    } // end-span
+  
+  } // end-social-links
+  
