@@ -47,3 +47,22 @@ $heavy    : 800;
 $headFont   : $thin 1.5em/1.5em $fontfamily;
 $mainFont   : $thin 1em/1.5em $fontfamily;
 $headColor  : lighten($blue, 20);
+
+
+// Config and Variables.
+
+// Fonts
+$heading-font: 'Oswald', Helvetica, sans-serif;
+$type-font: 'Open Sans', Arial, sans-serif;
+
+// Base font size and margins
+$base-text: 16px;
+$base-margin: $base-text * 1.6;
+
+// Colors
+$color-1: #2FC5CC;
+$color-2: #F06868;
+
+$light: #F4F7F7;
+$dark: darken($color-1, 35);
+$dark-2: darken($color-2, 10);
