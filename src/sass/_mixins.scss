@@ -26,3 +26,40 @@
 } //clearfix
 
 
+// Mixins.
+@mixin v-center {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin my-transition {
+  @include transition(all .2s ease-in 0s);
+}
+
+@mixin link-border($color, $size:2) {
+  @include border-color(null null $color null);
+  @include border-style(null null solid null);
+  @include border-width(null null rem($size) null);
+}
+
+@mixin form-border($color, $size:4) {
+  @include border-color(null null null $color);
+  @include border-style(null null null solid);
+  @include border-width(null null null rem($size));
+}
+
+@mixin my-h {
+  background-color: $color-1;
+  display: inline-block;
+  
+  padding: 0 rem(15);
+}
+
+@mixin section-padding {
+  padding: $base-margin * 4 0;
+}
+
+/*
