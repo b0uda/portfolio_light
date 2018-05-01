@@ -10,12 +10,14 @@
 // @import "compass/css3/flexbox";
 // @import "compass/css3/transition";
 
-@import "bourbon";
-@import "neat";
+
 
 // //External Libraries
 // @import "susy";
 // @import "breakpoint";
+
+@import "bourbon";
+@import "neat";
 
 // core patials
 @import 'variable';
@@ -33,5 +35,4 @@
 @import "modules/section";
 @import "modules/home";
 @import "modules/footer";
-
 

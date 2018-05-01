@@ -30,7 +30,8 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
-    "bourbon": "^5.0.0",
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^1.9.0",
     "breakpoint": "^0.1.6",
     "breakpoint-sass": "^2.7.1",
     "compass-mixins": "^0.12.10",

@@ -69,9 +69,8 @@ module.exports = {
 					loader: 'sass-loader' ,
 					options: {
 						includePaths: [
-						path.resolve(__dirname, "./node_modules/compass-mixins/lib") ,
-						path.resolve(__dirname, "./node_modules/susy/sass") ,
-						path.resolve(__dirname, "./node_modules/breakpoint-sass/stylesheets")
+						path.resolve(__dirname, "./node_modules/bourbon/app/assets/stylesheets") ,
+						path.resolve(__dirname, "./node_modules/bourbon-neat/app/assets/stylesheets") 
 					] ,
 					sourceMap: true
 					}
