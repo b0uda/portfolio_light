@@ -1,0 +1,103 @@
+/*
+	=================================================================================================
+		Portfolio Page.
+	=================================================================================================
+*/
+
+#portfolio {
+    background-image: url(//i.imgsafe.org/8586dee.jpg);
+    background-size: cover;
+  
+      text-align: center;
+  
+      z-index: 97;
+      
+    .title {
+      @include container;
+  
+      h2 {
+        @include my-h;
+      }
+    } // end-title
+  
+    .thumbnails {
+      @include container;
+  
+      ul {
+  
+        li {
+          position: relative;
+          display: inline-block;
+  
+          a {
+            position: relative;
+            display: block;
+  
+            @include size(rem(250));
+  
+            padding: 0;
+  
+            overflow: hidden;
+  
+            img {
+              position: relative;
+              z-index: 1;
+  
+              height: 100%;
+              width: 100%;
+            }
+  
+            span {
+              position: absolute;
+              z-index: 2;
+  
+              height: 100%;
+              width: 100%;
+  
+              top: 0;
+              left: 0;
+  
+              background-color: $dark;
+              color: $light;
+  
+              opacity: 0;
+              @include transition;
+  
+              padding: $base-margin rem(10);
+  
+              h2 {
+                margin-top: 0;
+                color: $color-2;
+              }
+  
+              p {
+                color: $light;
+  
+                margin-bottom: $base-margin;
+              }
+  
+              i {
+                font-size: rem(32);
+              }
+  
+            } // end-span
+  
+            &:hover {
+              border: none;
+  
+              img {
+  
+              }
+  
+              span {
+                opacity: .8;
+              }
+            } // end-hover
+  
+          } // end-a
+        } // end-li
+      } // end-ul
+    } // end-thumbnails
+  
+  } // end-portfolio
+  
