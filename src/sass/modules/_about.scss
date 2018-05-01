@@ -1,0 +1,118 @@
+
+/*
+	=================================================================================================
+		About Page.
+	=================================================================================================
+*/
+
+#about {
+    background-image: url(//i.imgsafe.org/7b4884d.jpg);
+    background-size: cover;
+  
+      text-align: center;
+  
+      z-index: 98;
+      
+    .intro {
+      @include container;
+  
+      margin-bottom: $base-margin * 2;
+  
+      h1 {
+        font-size: rem(32);
+  
+        color: $light;
+  
+        @include media($bp-medium) {
+          font-size: rem(26);
+        } // end-bp-medium
+      }
+  
+      p {
+        margin: 0 auto;
+      }
+  
+    } // end-intro
+  
+    .skills {
+      @include container;
+  
+      h2 {
+        @include my-h;
+      }
+  
+      ul {
+        text-align: center;
+  
+        li {
+          position: relative;
+          display: inline-block;
+          width: rem(250);
+  
+          margin-bottom: $base-margin;
+  
+          &:last-child {
+            margin-bottom: 0;
+          }
+  
+          @include media($bp-mobile) {
+            display: block;
+            width: auto;
+          }
+  
+          .lvl-1 {
+            position: relative;
+            margin: $base-margin auto 0 auto;
+  
+            li {
+              position: relative;
+              display: inline-block;
+              width: rem(240);
+              background-color: $dark;
+  
+              padding: rem(10);
+              margin-bottom: rem(10);
+  
+              &:last-child {
+                margin-bottom: 0;
+              }
+  
+              @include media($bp-mobile) {
+                display: block;
+                width: auto;
+              }
+  
+              span {
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                height: 100%;
+                
+                background-color: $color-2;
+                overflow: hidden;
+  
+                font-size: 1px;
+                text-indent: -9999px;
+              }
+  
+              u {
+                position: relative;
+                z-index: 2;
+  
+                text-decoration: none;
+                color: $light;
+              }
+  
+            } // end-li
+  
+          } // end-ul-lvl-1
+  
+        } // end-li
+  
+      } // end-ul
+  
+    } // end-skills
+  
+  } // end-about
+  
