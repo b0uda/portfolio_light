@@ -8,12 +8,17 @@
 	background-image: url(//i.imgsafe.org/8717961.jpg);
 	background-size: cover;
 
-	text-align: center;
+  text-align: center;
+  
+  // by bouda
+  padding-bottom: 0;
 
 	z-index: 99;
 
   .profil {
     @include container;
+
+    // by bouda
     margin-top: 100px;
 
     margin-bottom: $base-margin;
