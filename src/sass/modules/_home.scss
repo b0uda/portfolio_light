@@ -14,12 +14,13 @@
 
   .profil {
     @include container;
+    margin-top: 100px;
 
     margin-bottom: $base-margin;
 
     .profil-img {
       color: transparent;
-      background-image: url(//i.imgsafe.org/e5e9d41.jpg);
+      background-image: url(./../img/profil.JPG);
       background-size: contain; 
 
       @include size(rem(168));

@@ -11,6 +11,9 @@
 </head>
 
 <body>
+
+<!-- <img style="width: 400px; height:400px;" src="./img/profil.png" alt="mosiba"> -->
+
   <!-- NAV-BAR -->
   <div id="nav-bar">
 
@@ -287,9 +290,9 @@
       let t = TweenMax.from(".profil" , 1 , {opacity: 0 , top:-100 , scale: .5});
       // scene profil
       new ScrollMagic.Scene({
-          duration: 100, // the scene should last for a scroll distance of 100px
+          duration: 70, // the scene should last for a scroll distance of 100px
           // offset: 0 ,
-          triggerElement: ".profil"
+          triggerElement: ".nav-bar"
         })
         .setTween(t)
         .addIndicators()
@@ -298,10 +301,11 @@
 
 // scene profil
 new ScrollMagic.Scene({
-          duration: 100, // the scene should last for a scroll distance of 100px
-          offset: 50 ,
-          triggerElement: ".profil"
+          duration: 70, // the scene should last for a scroll distance of 100px
+          offset: 0 ,
+          triggerElement: ".nav-bar"
         })
+        // .setPin(".social-links")
         .setTween(TweenMax.staggerFrom(".social-links a" , 1 , { opacity:0 , scale:.1 , top:-40 }, .2) )
         .addIndicators()
         .addTo(controller);
