@@ -23,6 +23,7 @@ module.exports = {
 	} ,
 	module:{
 		rules:[
+			{ test: /\.js$/, loader: 'imports-loader?define=>false'},
 		{
 			test: /\.js$/,
 			use: [
@@ -30,7 +31,7 @@ module.exports = {
 				loader: 'babel-loader' ,
 				options: {
 					presets: ['es2015']
-				}
+				} 
 			}
 			]
 		},
