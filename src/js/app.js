@@ -31,11 +31,11 @@ $(document).ready(function (params) {
     //     rotation: 180,
     //     scale: .5
     // }));
-    tl.add(TweenLite.to(".animation .inner span", 1, {
+    tl.add(TweenLite.to(".absolute-intro .inner span", 1, {
         text: "My name is",
         ease: Linear.easeNone
     } ));
-    tl.add(TweenLite.to(".animation .inner span", 1, {
+    tl.add(TweenLite.to(".absolute-intro .inner span", 1, {
         opacity: 0,
     }));
     tl.add(TweenMax.from(".profil", 1, {

@@ -1,0 +1,21 @@
+.absolute-intro {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh; // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .inner {
+        // background: green;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 5rem;
+        }
+    }
+}
