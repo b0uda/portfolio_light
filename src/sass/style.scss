@@ -39,6 +39,12 @@
 @import "modules/contact";
 @import "modules/footer";
 
+#presentation{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
 .social-links a{
     position: relative;
 }
@@ -46,7 +52,6 @@
 body{
     position: relative;
 }
-
 .animation{
     position: absolute;
     left: 0;
