@@ -50,24 +50,51 @@ $(document).ready(function (params) {
         .addTo(controller);
 
 
+    // intro scene
+    new ScrollMagic.Scene({
+            duration: 100,
+            offset: 0,
+            triggerElement: $(".social-links")[0]
+        })
+        .on("enter", () => {
+            $(".intro").css("opacity", 1);
+            $(".intro").addClass("jackInTheBox");
+        })
+        .on("leave", () => {
+            $(".intro").removeClass("jackInTheBox");
+            $(".intro").animate({
+                opacity: 0
+            }, 500);
+        })
+        .addIndicators()
+        .addTo(controller);
+
+
+
+    // portfolio projects timeline
     tl = new TimelineMax();
     tl.add(TweenMax.from($("#portfolio ul li")[0], 1, {
         opacity: 0,
+        rotation:180,
         right: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[1], 1, {
         opacity: 0,
+        rotation:180,
         left: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[2], 1, {
         opacity: 0,
+        rotation:180,
         right: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[3], 1, {
         opacity: 0,
+        rotation:180,
         left: 400
     }));
 
+    // portfolio projects scrollmagic 
     new ScrollMagic.Scene({
             duration: 150,
             offset: 0,
@@ -76,52 +103,6 @@ $(document).ready(function (params) {
         .setTween(tl)
         .addIndicators()
         .addTo(controller);
-
-        let introHack = false;
-
-new ScrollMagic.Scene({
-    duration: 150,
-            offset: 0,
-    triggerElement: $(".social-links")[0]
-})
-.on("enter", function (event) {
-
-    if(introHack === false){
-        $(".intro").removeClass("fadeOutLeftBig");
-        $(".intro").addClass("fadeInLeftBig");
-        // $(".intro").removeClass("fadeInLeftBig");
-        // introHack = true;
-    }else{
-        $(".intro").removeClass("fadeOutRightBig");
-        $(".intro").addClass("fadeInRightBig");
-        // $(".intro").removeClass("fadeInRighttBig");
-        // introHack = false;
-
-    }
-    // $(".intro").addClass("fadeInLeftBig");
-    
-}).on("leave", function (event) {
-
-    if(introHack === false){
-        $(".intro").removeClass("fadeInLeftBig");
-        $(".intro").addClass("fadeOutRightBig");
-        introHack = true;
-
-        // $(".intro").removeClass("fadeOutRightBig");
-    }else{
-        $(".intro").removeClass("fadeInRightBig");
-        $(".intro").addClass("fadeOutLeftBig");
-        introHack = false;
-
-        // $(".intro").removeClass("fadeOutLeftBig");
-    }
-
-    
-    // $(".intro").addClass("fadeOutRightBig");
-})
-.addIndicators()
-.addTo(controller);
-
 
 
 
