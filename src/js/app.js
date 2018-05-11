@@ -4,13 +4,17 @@ import "jquery";
 
 import {
     TimelineMax,
-    TweenMax
+    TweenMax,
+    TweenLite,
+    Linear
 } from 'gsap';
 import ScrollMagic from 'scrollmagic';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 $(document).ready(function (params) {
+
+
     // init controller
     var controller = new ScrollMagic.Controller({
         globalSceneOptions: {
@@ -18,11 +22,22 @@ $(document).ready(function (params) {
         }
     });
 
-
-
-
     // home Timeline animation
     var tl = new TimelineMax();
+    // tl.add(TweenMax.from(".animation .inner span", 1, {
+    //     opacity: 0,
+    //     top: -100,
+    //     left: 600,
+    //     rotation: 180,
+    //     scale: .5
+    // }));
+    tl.add(TweenLite.to(".animation .inner span", 1, {
+        text: "My name is",
+        ease: Linear.easeNone
+    } ));
+    tl.add(TweenLite.to(".animation .inner span", 1, {
+        opacity: 0,
+    }));
     tl.add(TweenMax.from(".profil", 1, {
         opacity: 0,
         top: -100,
@@ -40,7 +55,7 @@ $(document).ready(function (params) {
 
     // Home ScrollView
     new ScrollMagic.Scene({
-            duration: 150, // the scene should last for a scroll distance of 100px
+            duration: 100, // the scene should last for a scroll distance of 100px
             offset: 0,
             triggerElement: $("#home")[0]
         })
@@ -75,22 +90,22 @@ $(document).ready(function (params) {
     tl = new TimelineMax();
     tl.add(TweenMax.from($("#portfolio ul li")[0], 1, {
         opacity: 0,
-        rotation:180,
+        rotation: 180,
         right: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[1], 1, {
         opacity: 0,
-        rotation:180,
+        rotation: 180,
         left: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[2], 1, {
         opacity: 0,
-        rotation:180,
+        rotation: 180,
         right: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[3], 1, {
         opacity: 0,
-        rotation:180,
+        rotation: 180,
         left: 400
     }));
 
