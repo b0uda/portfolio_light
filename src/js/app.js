@@ -1,4 +1,5 @@
 import "./../sass/style.scss";
+import "animate.css";
 import "jquery";
 
 import {
@@ -75,6 +76,56 @@ $(document).ready(function (params) {
         .setTween(tl)
         .addIndicators()
         .addTo(controller);
+
+        let introHack = false;
+
+new ScrollMagic.Scene({
+    duration: 150,
+            offset: 0,
+    triggerElement: $(".social-links")[0]
+})
+.on("enter", function (event) {
+
+    if(introHack === false){
+        $(".intro").removeClass("fadeOutLeftBig");
+        $(".intro").addClass("fadeInLeftBig");
+        // $(".intro").removeClass("fadeInLeftBig");
+        // introHack = true;
+    }else{
+        $(".intro").removeClass("fadeOutRightBig");
+        $(".intro").addClass("fadeInRightBig");
+        // $(".intro").removeClass("fadeInRighttBig");
+        // introHack = false;
+
+    }
+    // $(".intro").addClass("fadeInLeftBig");
+    
+}).on("leave", function (event) {
+
+    if(introHack === false){
+        $(".intro").removeClass("fadeInLeftBig");
+        $(".intro").addClass("fadeOutRightBig");
+        introHack = true;
+
+        // $(".intro").removeClass("fadeOutRightBig");
+    }else{
+        $(".intro").removeClass("fadeInRightBig");
+        $(".intro").addClass("fadeOutLeftBig");
+        introHack = false;
+
+        // $(".intro").removeClass("fadeOutLeftBig");
+    }
+
+    
+    // $(".intro").addClass("fadeOutRightBig");
+})
+.addIndicators()
+.addTo(controller);
+
+
+
+
+
 
 
 
