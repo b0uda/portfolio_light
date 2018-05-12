@@ -41,8 +41,8 @@ $(document).ready(function (params) {
     tl.add(TweenMax.from(".profil", 1, {
         opacity: 0,
         top: -100,
-        left: 600,
-        rotation: 180,
+        // left: 600,
+        // rotation: 180,
         scale: .5
     }));
     tl.add(TweenMax.staggerFrom(".social-links a", .5, {
@@ -91,22 +91,22 @@ $(document).ready(function (params) {
     tl.add(TweenMax.from($("#portfolio ul li")[0], 1, {
         opacity: 0,
         rotation: 180,
-        right: 400
+        // right: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[1], 1, {
         opacity: 0,
         rotation: 180,
-        left: 400
+        // left: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[2], 1, {
         opacity: 0,
         rotation: 180,
-        right: 400
+        // right: 400
     }));
     tl.add(TweenMax.from($("#portfolio ul li")[3], 1, {
         opacity: 0,
         rotation: 180,
-        left: 400
+        // left: 400
     }));
 
     // portfolio projects scrollmagic 
